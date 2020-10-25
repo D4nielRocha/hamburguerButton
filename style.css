@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border: 3px solid white;
+}
+
+.navbar .nav-bar-burguer{
+    position: absolute;
+    width: 70px;
+    height: 7px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px lightskyblue;
+    transition: all .3s ease-in-out;
+}
+
+.navbar .nav-bar-burguer::before,
+.navbar .nav-bar-burguer::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 7px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px lightskyblue;
+    transition: all .3s ease-in-out;
+}
+
+.navbar .nav-bar-burguer::before{
+    transform: translateY(-20px);
+}
+
+.navbar .nav-bar-burguer::after{
+    transform: translateY(20px);
+}
+
+
+.navbar.open .nav-bar-burguer::before,
+.navbar.open .nav-bar-burguer::after{
+    transform: translateY(0);
+
+}
